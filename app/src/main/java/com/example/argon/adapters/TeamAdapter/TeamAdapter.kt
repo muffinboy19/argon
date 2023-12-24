@@ -1,4 +1,4 @@
-package com.example.argon.Adapter
+package com.example.argon.adapters.TeamAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -30,10 +30,7 @@ class TeamAdapter(val context: Context, private val teamSections: List<TeamSecti
     override fun getItemCount(): Int = teamSections.size
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val sectionNameTextView: TextView = itemView.findViewById(R.id.sectionNameTextView)
-        val membersRecyclerView: RecyclerView = itemView.findViewById(R.id.membersRecyclerView)
-        init {
-            membersRecyclerView.layoutManager = LinearLayoutManager(itemView.context)
-        }
+        val sectionNameTextView: TextView = itemView.findViewById(R.id.wingName)
+        val membersRecyclerView: RecyclerView = itemView.findViewById(R.id.wingMembersRv)
     }
 }

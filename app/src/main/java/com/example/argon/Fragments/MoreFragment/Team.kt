@@ -1,4 +1,4 @@
-package com.example.argon.Fragment
+package com.example.argon.Fragments.MoreFragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,10 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.argon.Adapter.TeamAdapter
+import com.example.argon.adapters.TeamAdapter.TeamAdapter
 import com.example.argon.DataClass.TeamMember
 import com.example.argon.DataClass.TeamSection
-import com.example.argon.R
 import com.example.argon.databinding.FragmentTeamBinding
 
 class Team : Fragment() {

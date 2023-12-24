@@ -1,4 +1,4 @@
-package com.example.argon.Fragment
+package com.example.argon.Fragments.MainFragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

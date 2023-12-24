@@ -3,18 +3,17 @@ package com.example.argon.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.argon.Fragment.Event
-import com.example.argon.Fragment.Home
-import com.example.argon.Fragment.More
-import com.example.argon.Fragment.Points_Table
-import com.example.argon.Fragment.Schedule
+import com.example.argon.Fragments.MainFragment.Event
+import com.example.argon.Fragments.MainFragment.Home
+import com.example.argon.Fragments.MainFragment.More
+import com.example.argon.Fragments.MainFragment.Points_Table
+import com.example.argon.Fragments.MainFragment.Schedule
 import com.example.argon.R
 import com.example.argon.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
     private fun onNavigationItemSelected(fragment: Fragment): Boolean {
         if (supportFragmentManager.findFragmentById(R.id.fragmentContainer)?.javaClass != fragment::class.java) {
             loadFragment(fragment)
