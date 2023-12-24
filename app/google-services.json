@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "999398415949",
+    "project_id": "argon-368bd",
+    "storage_bucket": "argon-368bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999398415949:android:a97121511d2195e8574604",
+        "android_client_info": {
+          "package_name": "com.example.argon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg_bOt7p7lD5uP4YStITto4-B3oh5j8Bw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999398415949:android:3273b7438c0893c7574604",
+        "android_client_info": {
+          "package_name": "com.example.argon.Fragment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg_bOt7p7lD5uP4YStITto4-B3oh5j8Bw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
