@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navEvents"
-        android:title="Events" />
+        android:id="@+id/navSports"
+        android:title="Sports"
+        android:icon="@drawable/outline_sports_soccer"/>
 
     <item
         android:id="@+id/navSchedule"
