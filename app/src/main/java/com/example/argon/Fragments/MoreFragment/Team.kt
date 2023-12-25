@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.argon.Adapters.TeamAdapter.TeamAdapter
+import com.example.argon.Adapters.TeamAdapter.WingAdapter
 import com.example.argon.DataClass.TeamMember
 import com.example.argon.DataClass.TeamSection
 import com.example.argon.databinding.FragmentTeamBinding
@@ -17,7 +17,7 @@ class Team : Fragment() {
 
     private lateinit var binding: FragmentTeamBinding
     private var teamSections: MutableList<TeamSection> = mutableListOf()
-    private lateinit var teamAdapter: TeamAdapter
+    private lateinit var wingAdapter: WingAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,8 +28,8 @@ class Team : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        teamAdapter = TeamAdapter(requireContext(), teamSections)
-        binding.teamRv.adapter = teamAdapter
+        wingAdapter = WingAdapter(requireContext(), teamSections)
+        binding.teamRv.adapter = wingAdapter
         binding.teamRv.layoutManager = LinearLayoutManager(requireContext())
         fetchFromFirestore()
     }
@@ -54,7 +54,7 @@ class Team : Fragment() {
                 val teamSection = TeamSection(wing, members)
                 teamSections.add(teamSection)
             }
-            teamAdapter.notifyDataSetChanged()
+            wingAdapter.notifyDataSetChanged()
         }.addOnFailureListener { exception ->
             Toast.makeText(requireContext(), exception.localizedMessage, Toast.LENGTH_SHORT).show()
         }

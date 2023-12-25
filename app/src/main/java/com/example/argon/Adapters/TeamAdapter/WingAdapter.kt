@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.argon.DataClass.TeamSection
 import com.example.argon.R
 
-class TeamAdapter(val context: Context, private val teamSections: List<TeamSection>) :
-    RecyclerView.Adapter<TeamAdapter.viewHolder>() {
+class WingAdapter(val context: Context, private val teamSections: List<TeamSection>) :
+    RecyclerView.Adapter<WingAdapter.viewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.wing_layout, parent, false)

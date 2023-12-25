@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import com.example.argon.Fragments.MainFragment.Sports
 import com.example.argon.Fragments.MainFragment.Match
 import com.example.argon.Fragments.MainFragment.More
+import com.example.argon.Fragments.MainFragment.Notification
 import com.example.argon.Fragments.MainFragment.Points_Table
 import com.example.argon.Fragments.MainFragment.Schedule
 import com.example.argon.R
@@ -62,13 +63,20 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.title = "Asmita'24"
         supportActionBar?.setBackgroundDrawable(getDrawable(R.color.white))
 
+        binding.notification.setOnClickListener {
+            loadFragment(Notification())
+        }
+
     }
 
     private fun loadFragment(fragment: Fragment) {
         when (fragment) {
-            is Sports, is Schedule, is Match, is More, is Points_Table -> {
+            is Sports, is Schedule, is Match, is More, is Points_Table, is Notification -> {
                 supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, fragment)
-                    .commit()
+                    .apply {
+                        addToBackStack(null)
+                    }.commit()
+
             }
         }
     }
