@@ -38,27 +38,35 @@ class Team : Fragment() {
         val festiveCordiMembers = listOf(
             TeamMember("Member1", "Role1"),
             TeamMember("Member2", "Role2"),
-            TeamMember("Member2", "Role2"),
-            TeamMember("Member2", "Role2"),
-            TeamMember("Member2", "Role2"),
-            TeamMember("Member2", "Role2"),
-            TeamMember("Member2", "Role2"),
-            TeamMember("Member2", "Role2"),
-            TeamMember("Member2", "Role2"),
-            TeamMember("Member2", "Role2"),
-            TeamMember("Member2", "Role2"),
+            TeamMember("Member3", "Role3")
+        )
+        val financeMembers = listOf(
+            TeamMember("Member1", "Role1"),
             TeamMember("Member2", "Role2")
             // Add more members as needed
         )
-        val financeMembers = listOf(
-            TeamMember("Member3", "Role3"),
-            TeamMember("Member4", "Role4")
+        val AppMembers = listOf(
+            TeamMember("Member1", "Role1"),
+            TeamMember("Member2", "Role2")
+            // Add more members as needed
+        )
+        val webMembers = listOf(
+            TeamMember("Member1", "Role1"),
+            TeamMember("Member2", "Role2")
+            // Add more members as needed
+        )
+        val politicalMembers = listOf(
+            TeamMember("Member1", "Role1"),
+            TeamMember("Member2", "Role2")
             // Add more members as needed
         )
         // Add more sections as needed
         return listOf(
             TeamSection("Festive Cordi", festiveCordiMembers),
-            TeamSection("Finance", financeMembers)
+            TeamSection("Finance", financeMembers),
+            TeamSection("App", AppMembers),
+            TeamSection("politics", politicalMembers),
+            TeamSection("web", webMembers),
             // Add more sections as needed
         )
     }
