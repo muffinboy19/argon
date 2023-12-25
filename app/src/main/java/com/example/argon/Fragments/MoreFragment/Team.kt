@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.argon.adapters.TeamAdapter.TeamAdapter
+import com.example.argon.Adapters.TeamAdapter.TeamAdapter
 import com.example.argon.DataClass.TeamMember
 import com.example.argon.DataClass.TeamSection
 import com.example.argon.databinding.FragmentTeamBinding

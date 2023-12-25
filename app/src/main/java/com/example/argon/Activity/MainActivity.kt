@@ -2,12 +2,9 @@ package com.example.argon.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
-import android.widget.TextView
-import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.Fragment
 import com.example.argon.Fragments.MainFragment.Sports
-import com.example.argon.Fragments.MainFragment.Home
+import com.example.argon.Fragments.MainFragment.Match
 import com.example.argon.Fragments.MainFragment.More
 import com.example.argon.Fragments.MainFragment.Points_Table
 import com.example.argon.Fragments.MainFragment.Schedule
@@ -35,8 +32,8 @@ class MainActivity : AppCompatActivity() {
                     Schedule()
                 )
 
-                R.id.navHome -> return@OnNavigationItemSelectedListener onNavigationItemSelected(
-                    Home()
+                R.id.navMatches -> return@OnNavigationItemSelectedListener onNavigationItemSelected(
+                    Match()
                 )
 
                 R.id.navMore -> return@OnNavigationItemSelectedListener onNavigationItemSelected(
@@ -58,8 +55,8 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavBar.setOnNavigationItemSelectedListener(
             onNavigationItemSelectedListener
         )
-        loadFragment(Home())
-        binding.bottomNavBar.selectedItemId = R.id.navHome
+        loadFragment(Match())
+        binding.bottomNavBar.selectedItemId = R.id.navMatches
 
         setSupportActionBar(binding.toolMain)
         supportActionBar?.title = "Asmita'23"
@@ -69,7 +66,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadFragment(fragment: Fragment) {
         when (fragment) {
-            is Sports, is Schedule, is Home, is More, is Points_Table -> {
+            is Sports, is Schedule, is Match, is More, is Points_Table -> {
                 supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, fragment)
                     .commit()
             }

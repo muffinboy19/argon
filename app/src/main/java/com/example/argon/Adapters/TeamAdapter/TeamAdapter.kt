@@ -1,4 +1,4 @@
-package com.example.argon.adapters.TeamAdapter
+package com.example.argon.Adapters.TeamAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,16 +9,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.argon.DataClass.TeamSection
 import com.example.argon.R
-class TeamAdapter(val context: Context, private val teamSections: List<TeamSection>) :
-    RecyclerView.Adapter<TeamAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+class TeamAdapter(val context: Context, private val teamSections: List<TeamSection>) :
+    RecyclerView.Adapter<TeamAdapter.viewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.wing_layout, parent, false)
-        return ViewHolder(view)
+        return viewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: viewHolder, position: Int) {
         val teamSection = teamSections[position]
         holder.sectionNameTextView.text = teamSection.sectionName
 
@@ -29,8 +30,11 @@ class TeamAdapter(val context: Context, private val teamSections: List<TeamSecti
 
     override fun getItemCount(): Int = teamSections.size
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class viewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val sectionNameTextView: TextView = itemView.findViewById(R.id.wingName)
         val membersRecyclerView: RecyclerView = itemView.findViewById(R.id.wingMembersRv)
+        init {
+            membersRecyclerView.layoutManager = LinearLayoutManager(itemView.context)
+        }
     }
 }

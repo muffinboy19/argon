@@ -11,8 +11,8 @@
         android:title="Schedule" />
 
     <item
-        android:id="@+id/navHome"
-        android:title="Home"
+        android:id="@+id/navMatches"
+        android:title="Matches"
         android:icon="@drawable/olympics"/>
 
     <item
