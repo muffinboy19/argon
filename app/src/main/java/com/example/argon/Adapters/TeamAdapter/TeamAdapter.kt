@@ -14,27 +14,23 @@ class TeamAdapter(val context: Context, private val teamSections: List<TeamSecti
     RecyclerView.Adapter<TeamAdapter.viewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.wing_layout, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.wing_layout, parent, false)
         return viewHolder(view)
     }
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
         val teamSection = teamSections[position]
-        holder.sectionNameTextView.text = teamSection.sectionName
 
-        val memberAdapter = MemberAdapter(teamSection.members)
-        holder.membersRecyclerView.adapter = memberAdapter
-        holder.membersRecyclerView.layoutManager = LinearLayoutManager(context)
+        holder.wingName.text = teamSection.wingName
+
+        holder.membersRv.adapter = MemberAdapter(teamSection.members)
+        holder.membersRv.layoutManager = LinearLayoutManager(context)
     }
 
     override fun getItemCount(): Int = teamSections.size
 
     class viewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val sectionNameTextView: TextView = itemView.findViewById(R.id.wingName)
-        val membersRecyclerView: RecyclerView = itemView.findViewById(R.id.wingMembersRv)
-        init {
-            membersRecyclerView.layoutManager = LinearLayoutManager(itemView.context)
-        }
+        val wingName: TextView = itemView.findViewById(R.id.wingName)
+        val membersRv: RecyclerView = itemView.findViewById(R.id.wingMembersRv)
     }
 }

@@ -15,13 +15,18 @@ class MatchesAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     }
 
     override fun createFragment(position: Int): Fragment {
-        return if (position == 1) {
-            Ongoing()
-        } else if (position == 0) {
-            Upcoming()
-        } else {
-            Completed()
+        return when (position) {
+            1 -> {
+                Ongoing()
+            }
+
+            0 -> {
+                Upcoming()
+            }
+
+            else -> {
+                Completed()
+            }
         }
     }
-
 }

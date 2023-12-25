@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.argon.DataClass.TeamMember
 import com.example.argon.R
 
-class MemberAdapter(private val members: List<TeamMember>) :
+class MemberAdapter(private val members:List<TeamMember>) :
     RecyclerView.Adapter<MemberAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -19,14 +19,14 @@ class MemberAdapter(private val members: List<TeamMember>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val teamMember = members[position]
-        holder.nameTextView.text = teamMember.name
-        holder.roleTextView.text = teamMember.role
+        holder.name.text = teamMember.name
+        holder.role.text = teamMember.role
     }
 
     override fun getItemCount(): Int = members.size
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nameTextView: TextView = itemView.findViewById(R.id.nameTextView)
-        val roleTextView: TextView = itemView.findViewById(R.id.roleTextView)
+        val name: TextView = itemView.findViewById(R.id.nameTextView)
+        val role: TextView = itemView.findViewById(R.id.roleTextView)
     }
 }
