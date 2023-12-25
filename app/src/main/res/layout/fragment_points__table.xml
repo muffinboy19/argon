@@ -70,9 +70,10 @@
         android:id="@+id/pointsRV"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        tools:listitem="@layout/point_table_layout"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/rightGuide"
-        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/infoLayout" />
 
 

@@ -6,13 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.argon.R
+import com.example.argon.databinding.FragmentPointsTableBinding
 
 class Points_Table : Fragment() {
+    private lateinit var binding:FragmentPointsTableBinding
+    private var point:List<Points_Table> = emptyList()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_points__table, container, false)
+    ): View {
+        binding = FragmentPointsTableBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
     }
 }

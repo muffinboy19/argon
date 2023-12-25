@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavBar.selectedItemId = R.id.navMatches
 
         setSupportActionBar(binding.toolMain)
-        supportActionBar?.title = "Asmita'23"
+        supportActionBar?.title = "Asmita'24"
         supportActionBar?.setBackgroundDrawable(getDrawable(R.color.white))
 
     }
