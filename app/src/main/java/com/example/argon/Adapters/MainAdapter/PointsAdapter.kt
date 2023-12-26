@@ -1,4 +1,4 @@
-package com.example.argon.Adapters
+package com.example.argon.Adapters.MainAdapter
 
 import android.view.LayoutInflater
 import android.view.View

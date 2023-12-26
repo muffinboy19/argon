@@ -6,8 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
-import com.example.argon.Adapters.MatchesAdapter
-import com.example.argon.Adapters.SportsAdapter
+import com.example.argon.Adapters.MainAdapter.SportsAdapter
 import com.example.argon.R
 import com.example.argon.databinding.FragmentSportBinding
 import com.google.android.material.tabs.TabLayout

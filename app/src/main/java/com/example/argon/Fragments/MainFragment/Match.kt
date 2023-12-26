@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
-import com.example.argon.Adapters.MatchesAdapter
+import com.example.argon.Adapters.MainAdapter.MatchesAdapter
 import com.example.argon.databinding.FragmentMatchBinding
 import com.google.android.material.tabs.TabLayout
 

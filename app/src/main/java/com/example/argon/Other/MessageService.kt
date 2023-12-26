@@ -1,4 +1,4 @@
-package com.example.argon
+package com.example.argon.Other
 
 import android.util.Log
 import com.google.firebase.messaging.FirebaseMessagingService
